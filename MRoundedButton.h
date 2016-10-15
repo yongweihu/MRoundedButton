@@ -35,15 +35,16 @@ extern CGFloat const MRoundedButtonMaxValue;
 @interface MRoundedButton : UIControl
 
 @property (readonly, nonatomic) MRoundedButtonStyle         mr_buttonStyle;
-@property (nonatomic, assign)   CGFloat                     cornerRadius               UI_APPEARANCE_SELECTOR;
-@property (nonatomic, assign)   CGFloat                     borderWidth                UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong)   UIColor                     *borderColor               UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong)   UIColor                     *contentColor              UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong)   UIColor                     *foregroundColor           UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong)   UIColor                     *borderAnimateToColor      UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong)   UIColor                     *contentAnimateToColor     UI_APPEARANCE_SELECTOR;
-@property (nonatomic, strong)   UIColor                     *foregroundAnimateToColor  UI_APPEARANCE_SELECTOR;
-@property (nonatomic, assign)   BOOL                        restoreSelectedState       UI_APPEARANCE_SELECTOR;
+@property (readonly, assign)    BOOL                        mr_buttonHighlighted;
+@property (nonatomic, assign)   CGFloat                     cornerRadius;               UI_APPEARANCE_SELECTOR
+@property (nonatomic, assign)   CGFloat                     borderWidth;                UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *borderColor;               UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *contentColor;              UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *foregroundColor;           UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *borderAnimationColor;      UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *contentAnimationColor;     UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *foregroundAnimationColor;  UI_APPEARANCE_SELECTOR
+@property (nonatomic, assign)   BOOL                        restoreHighlightState;      UI_APPEARANCE_SELECTOR
 
 @property (nonatomic, weak)     UILabel                     *textLabel;
 @property (nonatomic, weak)     UILabel                     *detailTextLabel;
@@ -66,10 +67,10 @@ extern NSString *const kMRoundedButtonBorderWidth;
 extern NSString *const kMRoundedButtonBorderColor;
 extern NSString *const kMRoundedButtonContentColor;
 extern NSString *const kMRoundedButtonForegroundColor;
-extern NSString *const kMRoundedButtonBorderAnimateToColor;
-extern NSString *const kMRoundedButtonContentAnimateToColor;
-extern NSString *const kMRoundedButtonForegroundAnimateToColor;
-extern NSString *const kMRoundedButtonRestoreSelectedState;
+extern NSString *const kMRoundedButtonBorderAnimationColor;
+extern NSString *const kMRoundedButtonContentAnimationColor;
+extern NSString *const kMRoundedButtonForegroundAnimationColor;
+extern NSString *const kMRoundedButtonRestoreHighlightState;
 
 @interface MRoundedButtonAppearanceManager : NSObject
 
